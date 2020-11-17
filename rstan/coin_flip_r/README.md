@@ -1,5 +1,6 @@
 # Coin Flip Example/RStan
 
+
 ### References
 
 - https://www.r-bloggers.com/2020/01/applied-bayesian-statistics-using-stan-and-r/

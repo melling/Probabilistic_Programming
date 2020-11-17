@@ -8,9 +8,9 @@ A collection of examples to learn Probabilistic Programming
 
 ## RStan
 
+- [Coin Flip Example](rstan/coin_flip_r/README.md)
 - [8 Schools Example](rstan/school_example_r/README.md)
 - [Rats Example](rstan/rats_r/README.md)
-- [Coin Flip Example](rstan/coin_flip_r/README.md)
 
 ### References
 
