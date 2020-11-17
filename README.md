@@ -25,6 +25,7 @@ A collection of examples to learn Probabilistic Programming
 
 ## Julia Stan
 
+- https://astrostatistics.psu.edu/su14/lectures/BayesComp2014LabMCMCv1.pdf
 - https://mc-stan.org/users/interfaces/julia-stan
 - http://stanjulia.github.io/Stan.jl/stable/INTRO.html
 
