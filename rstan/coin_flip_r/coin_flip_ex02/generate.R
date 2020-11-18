@@ -10,7 +10,7 @@ y <- rbinom(N, 1, theta)
 
 data <- list(N=N, y=y) # Named list
 
-fit <- stan('bernoulli.stan', data=data)
+fit <- stan('bern.stan', data=data)
 
 print(fit)
 
