@@ -52,6 +52,7 @@ A collection of examples to learn Probabilistic Programming
 
 ## Misc
 
+- https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers
 - https://blog.floydhub.com/naive-bayes-for-machine-learning/
 - https://ryxcommar.com/2019/09/06/some-things-you-maybe-didnt-know-about-linear-regression/
 - https://towardsdatascience.com/an-introduction-to-bayesian-inference-in-pystan-c27078e58d53
