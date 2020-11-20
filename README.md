@@ -39,3 +39,8 @@ A collection of examples to learn Probabilistic Programming
 - https://github.com/pymc-devs/pymc3
 - https://people.duke.edu/~ccc14/sta-663/PyMC3.html
 - https://medium.com/airy-science/bayesian-inference-with-probabilistic-programming-using-pymc3-a00702ccd9e0
+
+## Time Series
+
+- https://www.unofficialgoogledatascience.com/2017/07/fitting-bayesian-structural-time-series.html?m=1
+- https://multithreaded.stitchfix.com/blog/2016/04/21/forget-arima/
