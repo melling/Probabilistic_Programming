@@ -44,3 +44,20 @@ A collection of examples to learn Probabilistic Programming
 
 - https://www.unofficialgoogledatascience.com/2017/07/fitting-bayesian-structural-time-series.html?m=1
 - https://multithreaded.stitchfix.com/blog/2016/04/21/forget-arima/
+
+## Multi-Level Models
+
+- https://www.rensvandeschoot.com/tutorials/brms-started/
+- https://www.rensvandeschoot.com/tutorials/lme4/
+
+## Misc
+
+- https://srcd.onlinelibrary.wiley.com/doi/full/10.1111/cdev.12169
+- https://bookdown.org/content/3686/stan.html
+- http://dm13450.github.io/2020/11/03/BayesPointProcess.html
+- https://www.tweag.io/blog/2019-10-25-mcmc-intro1/
+- https://towardsdatascience.com/importance-sampling-introduction-e76b2c32e744
+- https://www.r-bloggers.com/2014/09/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/
+
+
+
