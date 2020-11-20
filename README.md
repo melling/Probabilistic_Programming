@@ -60,4 +60,4 @@ A collection of examples to learn Probabilistic Programming
 - https://www.r-bloggers.com/2014/09/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/
 - http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/
 - https://github.com/chi-feng/mcmc-demo
-
+- https://towardsdatascience.com/explaining-probability-plots-9e5c5d304703
