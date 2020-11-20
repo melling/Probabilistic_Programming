@@ -52,6 +52,7 @@ A collection of examples to learn Probabilistic Programming
 
 ## Misc
 
+- https://jakevdp.github.io/blog/2014/06/14/frequentism-and-bayesianism-4-bayesian-in-python/
 - https://www.evanmiller.org/statistical-formulas-for-programmers.html
 - https://srcd.onlinelibrary.wiley.com/doi/full/10.1111/cdev.12169
 - https://bookdown.org/content/3686/stan.html
