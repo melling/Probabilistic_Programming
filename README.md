@@ -52,6 +52,7 @@ A collection of examples to learn Probabilistic Programming
 
 ## Misc
 
+- https://mathvault.ca/statistical-significance/
 - https://betanalpha.github.io/assets/case_studies/principled_bayesian_workflow.html
 - https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers
 - https://blog.floydhub.com/naive-bayes-for-machine-learning/
