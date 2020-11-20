@@ -52,6 +52,7 @@ A collection of examples to learn Probabilistic Programming
 
 ## Misc
 
+- https://www.evanmiller.org/statistical-formulas-for-programmers.html
 - https://srcd.onlinelibrary.wiley.com/doi/full/10.1111/cdev.12169
 - https://bookdown.org/content/3686/stan.html
 - http://dm13450.github.io/2020/11/03/BayesPointProcess.html
@@ -61,3 +62,6 @@ A collection of examples to learn Probabilistic Programming
 - http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/
 - https://github.com/chi-feng/mcmc-demo
 - https://towardsdatascience.com/explaining-probability-plots-9e5c5d304703
+- https://philippmuens.com/linear-and-multiple-regression-from-scratch/
+- https://www.r-bloggers.com/2019/05/bayesian-modeling-using-stan-a-case-study/
+
