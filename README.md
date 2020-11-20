@@ -73,4 +73,4 @@ A collection of examples to learn Probabilistic Programming
 - https://towardsdatascience.com/explaining-probability-plots-9e5c5d304703
 - https://philippmuens.com/linear-and-multiple-regression-from-scratch/
 - https://www.r-bloggers.com/2019/05/bayesian-modeling-using-stan-a-case-study/
-
+- https://philippmuens.com/logistic-regression-from-scratch/
