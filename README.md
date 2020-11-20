@@ -52,6 +52,12 @@ A collection of examples to learn Probabilistic Programming
 
 ## Misc
 
+- https://ryxcommar.com/2019/09/06/some-things-you-maybe-didnt-know-about-linear-regression/
+- https://towardsdatascience.com/an-introduction-to-bayesian-inference-in-pystan-c27078e58d53
+- https://chi-feng.github.io/mcmc-demo/
+- https://github.com/fonnesbeck/statistical-analysis-python-tutorial
+- https://towardsdatascience.com/how-bayes-theorem-helped-win-the-second-world-war-7f3be5f4676c
+- https://stackoverflow.com/questions/54853017/why-is-my-python-implementation-of-metropolis-algorithm-mcmc-so-slow
 - https://jakevdp.github.io/blog/2014/06/14/frequentism-and-bayesianism-4-bayesian-in-python/
 - https://www.evanmiller.org/statistical-formulas-for-programmers.html
 - https://srcd.onlinelibrary.wiley.com/doi/full/10.1111/cdev.12169
