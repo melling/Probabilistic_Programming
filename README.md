@@ -58,6 +58,6 @@ A collection of examples to learn Probabilistic Programming
 - https://www.tweag.io/blog/2019-10-25-mcmc-intro1/
 - https://towardsdatascience.com/importance-sampling-introduction-e76b2c32e744
 - https://www.r-bloggers.com/2014/09/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/
-
-
+- http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/
+- https://github.com/chi-feng/mcmc-demo
 
