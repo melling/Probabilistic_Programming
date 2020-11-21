@@ -5,7 +5,11 @@ A collection of examples to learn Probabilistic Programming
 ## Resources
 
 - https://benlambertdotcom.files.wordpress.com/2019/03/bayesianbook_problemsanswers_including_errata.pdf
-
+- http://www.stat.columbia.edu/~gelman/book/
+    - https://github.com/avehtari/BDA_R_demos
+    - [Datasets in BDA3](http://www.stat.columbia.edu/~gelman/book/data/)
+    - https://avehtari.github.io/BDA_course_Aalto/
+    
 ## RStan
 
 - [Coin Flip Example](rstan/coin_flip_r/README.md)
