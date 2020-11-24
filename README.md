@@ -54,6 +54,10 @@ A collection of examples to learn Probabilistic Programming
 - https://www.rensvandeschoot.com/tutorials/brms-started/
 - https://www.rensvandeschoot.com/tutorials/lme4/
 
+## brms 
+
+- https://vuorre.netlify.app/post/2017/01/02/how-to-compare-two-groups-with-robust-bayesian-estimation-using-r-stan-and-brms/
+
 ## Misc
 
 - https://mathvault.ca/statistical-significance/
