@@ -59,6 +59,10 @@ A collection of examples to learn Probabilistic Programming
 - https://vuorre.netlify.app/post/2017/01/02/how-to-compare-two-groups-with-robust-bayesian-estimation-using-r-stan-and-brms/
 - https://www.fionamseaton.com/tutorial/misc/brms-examples/
 
+## rstanarm
+
+- [Introduction to Bayesian Computation Using the rstanarm R Package](https://youtu.be/z7zOzL9Rrzs)
+
 ## Misc
 
 - https://mathvault.ca/statistical-significance/
