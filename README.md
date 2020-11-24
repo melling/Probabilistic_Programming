@@ -57,6 +57,7 @@ A collection of examples to learn Probabilistic Programming
 ## brms 
 
 - https://vuorre.netlify.app/post/2017/01/02/how-to-compare-two-groups-with-robust-bayesian-estimation-using-r-stan-and-brms/
+- https://www.fionamseaton.com/tutorial/misc/brms-examples/
 
 ## Misc
 
