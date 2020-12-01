@@ -200,6 +200,7 @@ out <- data.frame(
   PassengerId=test$PassengerId,
   Survived=as.numeric(as.character(preds)),
   row.names=NULL)
+
 write.csv(x=out,
           file='stanqua.csv',
           row.names=FALSE,
