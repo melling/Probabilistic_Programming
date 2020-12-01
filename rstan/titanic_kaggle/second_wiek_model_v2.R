@@ -135,10 +135,10 @@ model = stan_model("second_wiek_model.stan")
 
 # fit_model
 
-fit_pred = sampling(model, data_in, warmup=200, iter=2000, chains=4,
+fit_pred = sampling(model, data_in, warmup=500, iter=3000, chains=4,
                par=c("pred"),
-              
-               #               control = list(adapt_delta=0.99),
+               thin=1,
+                control = list(adapt_delta=0.99),
 #               sample_file="sampleFile.txt",  diagnostic_file="diag.txt",
                show_messages=TRUE, verbose=TRUE)
 

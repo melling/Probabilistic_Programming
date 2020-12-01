@@ -65,6 +65,7 @@ test <- tt[tt$status=='test',]
 # end of preparation and data reading
 
 options(width=90)
+
 des.matrix <- function(formula,data) {
   form2 <- strsplit(as.character(formula),'~',fixed=TRUE)
   resp <- form2[[length(form2)]]
@@ -90,7 +91,37 @@ data_in <- des.matrix(~ Sex+Pclass,data=train)
 
 parameters=c('std','f','log_lik')
 
-fit1 <- stan(model_name = "rblogger_loo", 
+my_code <- '
+data {
+  int ntrain;
+  int survived[ntrain];
+  int np;
+  int nterm;
+  int terms[np];
+  matrix [ntrain,np]  tx;
+}
+parameters {
+  vector[np] f;
+  real std[nterm];
+  real stdhyp;
+}
+model {        
+  stdhyp ~ normal(0,2);
+  std ~ normal(0,stdhyp);
+  for (i in 1:np) {
+    f[i] ~ normal(0,std[terms[i]]);
+  }
+  survived ~ bernoulli_logit(tx*f);
+}
+generated quantities {
+  vector [ntrain] log_lik;
+  for (i in 1:ntrain) {
+    log_lik[i] = bernoulli_logit_log(survived[i], tx[i]*f);
+  }
+}
+'
+
+fit1 <- stan(model_code = my_code, 
     data = data_in, 
     pars=parameters,
     iter = 1000, 
@@ -109,3 +140,68 @@ print.mySmodel <- function(x) {
   cat('n')
   invisible(x)
 }
+
+mySmodel <- function(formula,data) {
+  datain <- des.matrix(formula,data)
+  
+  fitx <- 
+    stan(model_code = my_code, 
+         data = datain, 
+         pars=parameters,
+         fit=fit1,
+         iter = 2000, 
+         chains = parallel::detectCores(),
+         open_progress=FALSE)
+  log_lik1 <- extract_log_lik(fitx)
+  loo1 <- loo(log_lik1)
+  ll <-  list(myform=formula,fitx=fitx,loo1=loo1)
+  class(ll) <- 'mySmodel'
+  cat(format(formula),loo1$elpd_loo,loo1$se_elpd_loo,'n')
+  ll
+}
+
+mySmodel(Survived ~ 
+           Title ,
+         data=train)
+
+################# prediction functions ####
+
+myPmodel <- function(formula,data) {
+  datain <- des.matrix(formula,data)
+  
+  fitx <- 
+    stan(model_code = my_code, 
+         data = datain, 
+         pars=parameters,
+         fit=fit1,
+         iter = 2000, 
+         chains = parallel::detectCores(),
+         open_progress=FALSE)
+  list(myform=formula,fitx=fitx)
+}    
+
+PredM <- myPmodel(~ Title + Pclass + sibsp + Title:Pclass + Embarked + oe + Title:sibsp + parch
+    ,data=train)
+
+
+mySpred <- function(mymodel,newdata) {
+  pfit <- as.matrix(mymodel$fitx)
+  fmat <- pfit[,grep('^f\\[', colnames(pfit))]
+  px <- des.matrix(mymodel$myform,data=newdata)$tx
+  mylpred <- tcrossprod(fmat,px)
+  mpred <- apply(mylpred,2,function(x) mean(x))
+  pred <- as.numeric(gtools::inv.logit(mpred)>.5)
+  factor(pred)
+}
+
+preds <- mySpred(PredM,test)
+
+out <- data.frame(
+  PassengerId=test$PassengerId,
+  Survived=as.numeric(as.character(preds)),
+  row.names=NULL)
+write.csv(x=out,
+          file='stanqua.csv',
+          row.names=FALSE,
+          quote=FALSE)
+
