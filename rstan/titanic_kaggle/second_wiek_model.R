@@ -51,6 +51,8 @@ tt$ticket[tt$ticket %in% c('PP','PPP','LINE','LP','SP')] <- 'PPPP'
 tt$ticket <- factor(tt$ticket)
 tt$fare <- cut(tt$Fare,breaks=c(min(tt$Fare)-1,quantile(tt$Fare,seq(.2,.8,.2)),max(tt$Fare)+1))
 
+tt$Sex <- factor(tt$Sex)
+
 train <- tt[tt$status=='train',]
 test <- tt[tt$status=='test',]
 
