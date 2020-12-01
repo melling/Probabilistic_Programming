@@ -127,13 +127,13 @@ parameters <- c("intercept", "sd1",
 
 model = stan_model("second_wiek_model.stan")
 # 
-fit_model = sampling(model, data_in, warmup=500, iter=2000, chains=4,
-               par=parameters,
-#               control = list(adapt_delta=0.99),
-#               sample_file="sampleFile.txt",  diagnostic_file="diag.txt",
-               show_messages=TRUE, verbose=TRUE)
+# fit_model = sampling(model, data_in, warmup=500, iter=2000, chains=4,
+#                par=parameters,
+# #               control = list(adapt_delta=0.99),
+# #               sample_file="sampleFile.txt",  diagnostic_file="diag.txt",
+#                show_messages=TRUE, verbose=TRUE)
 
-fit_model
+# fit_model
 
 fit_pred = sampling(model, data_in, warmup=200, iter=2000, chains=4,
                par=c("pred"),
@@ -146,29 +146,29 @@ fit_pred
 
 # Original Model ####
 
-fit1 <- stan(model_name = "second_wiek_model.stan",
-             data = data_in,
-             pars = parameters,
-             iter = 1000,
-             #include = TRUE,
-             chains = 1,
-#             thin = 1,
-#              algorithm="NUTS",
-             open_progress=FALSE)
+# fit1 <- stan(model_name = "second_wiek_model.stan",
+#              data = data_in,
+#              pars = parameters,
+#              iter = 1000,
+#              #include = TRUE,
+#              chains = 1,
+# #             thin = 1,
+# #              algorithm="NUTS",
+#              open_progress=FALSE)
 
 # fit1
 # y = alpha + beta_1 * x1 + beta_2 * x2 + beta3*x3 + ...
 
 #plot(fit1,ask=TRUE)
 #traceplot(fit1,ask=TRUE)
-fit2 <- stan(model_name = "second_wiek_model.stan", 
-             data = data_in, 
-             fit=fit1,
-             pars=c('pred'),
-             iter = 2000, 
-             warmup = 200,
-             chains = 4,
-             open_progress=FALSE)
+# fit2 <- stan(model_name = "second_wiek_model.stan", 
+#              data = data_in, 
+#              fit=fit1,
+#              pars=c('pred'),
+#              iter = 2000, 
+#              warmup = 200,
+#              chains = 4,
+#              open_progress=FALSE)
 
 fit2 = fit_pred
 
