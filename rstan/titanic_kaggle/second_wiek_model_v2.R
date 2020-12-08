@@ -62,24 +62,8 @@ contrasts(tt$Title)
 
 train <- tt[tt$status=='train',]
 test <- tt[tt$status=='test',]
-#summary(train)
-#train$Sex
-#end of preparation and data reading
-# c(1:2)[c("male", "female")]
-# c(1:2)[c(3, 4)]
-# train$Sex[train$Sex == 'male'] <- 1
-# train$Sex[train$Sex == 'female'] <- 2
-# train$Sex <- as.numeric(train$Sex)
-# train$Sex
-# sex <- factor(c("male", "female", "female", "male"))
-# as.numeric("male")
-# c(1:2)[train$Sex]
-# typeof(train$Sex)
-# unique(train$Sex)
-# train$Name
-# c(0:2)[train$Pclass]
-# c(1:7)[train$cabchar]
-# train$Pclass
+
+
 
 options(width=90)
 
@@ -137,7 +121,7 @@ model = stan_model("second_wiek_model.stan")
 
 # fit_model
 
-fit_pred = sampling(model, data_in, warmup=500, iter=3000, chains=4,
+fit_pred = sampling(model, data_in, warmup=600, iter=2000, chains=4,
                par=c("pred"),
                thin=1,
                 control = list(adapt_delta=0.99),
@@ -173,17 +157,40 @@ fit_pred
 #              open_progress=FALSE)
 
 fit2 = fit_pred
+fit_pred
+# p <- extract(fit_pred, "sdfare")$sdfare;
+# hist(p)
+p <- extract(fit_pred)
+plot(p$pred)
+
 
 fit3 <- as.matrix(fit2)[,-419]
-#plots of individual passengers
-#plot(density(fit3[,1]))
 
-#plot(density(fit3[,18]))
-#plot(density(as.numeric(fit3),adjust=.3))
+# plots of individual passengers
+plot(density(fit3[,1]))
+plot(density(fit3[,2])) # Survives
+plot(density(fit3[,5])) # Survives
+plot(density(fit3[,3]))
+plot(density(fit3[,18]))
+plot(density(as.numeric(fit3),adjust=.3))
+
+mean(fit3[,1])
+# median(fit3[,1])
+mean(fit3[,2])
+# median(fit3[,2])
+
+# 2 = apply over columns
 decide1 <- apply(fit3,2,function(x) mean(x)>.5)
 decide2 <- apply(fit3,2,function(x) median(x)>.5)
 #table(decide1,decide2)
 
+# Mode   FALSE    TRUE 
+# logical     249     169 #
+# logical     250     168 
+# logical     246     172 # 4000 draws
+# logical     250     168 # 5600 draws
+
+summary(decide1)
 out <- data.frame(
   PassengerId=test$PassengerId,
   Survived=as.numeric(decide1),
