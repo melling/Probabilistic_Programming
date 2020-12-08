@@ -53,6 +53,8 @@ tt$fare <- cut(tt$Fare,breaks=c(min(tt$Fare)-1,quantile(tt$Fare,seq(.2,.8,.2)),m
 
 # tt$Sex <- as.factor(tt$Sex)
 tt$Sex <- factor(tt$Sex)
+contrasts(tt$Sex)
+contrasts(tt$Title)
 
 # tt$Sex[tt$Sex == 'male'] <- 1
 # tt$Sex[tt$Sex == 'female'] <- 2
