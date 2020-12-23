@@ -130,6 +130,7 @@ fit_pred = sampling(model, data_in, warmup=600, iter=2000, chains=4,
 
 fit_pred
 
+
 # Original Model ####
 
 # fit1 <- stan(model_name = "second_wiek_model.stan",
