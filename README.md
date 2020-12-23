@@ -15,7 +15,7 @@ A collection of examples to learn Probabilistic Programming
 - [Coin Flip Example](rstan/coin_flip_r/README.md)
 - [8 Schools Example](rstan/school_example_r/README.md)
 - [Rats Example](rstan/rats_r/README.md)
-- [Titanic Kaggle with Stan](titanic_kaggle)
+- [Titanic Kaggle with Stan](rstan/titanic_kaggle)
 
 ### References
 
